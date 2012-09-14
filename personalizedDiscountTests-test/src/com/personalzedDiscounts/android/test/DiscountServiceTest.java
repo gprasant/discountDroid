@@ -1,14 +1,13 @@
 package com.personalzedDiscounts.android.test;
 
+import android.test.AndroidTestCase;
 import android.util.Log;
-
 import com.personalzedDiscounts.android.domain.Discount;
 import com.personalzedDiscounts.android.service.DiscountService;
 import junit.framework.Assert;
-import junit.framework.TestCase;
 
 
-public class DiscountServiceTest extends TestCase {
+public class DiscountServiceTest extends AndroidTestCase {
 
     private DiscountService service;
 
