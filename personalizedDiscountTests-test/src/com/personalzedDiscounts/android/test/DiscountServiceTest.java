@@ -1,7 +1,6 @@
 package com.personalzedDiscounts.android.test;
 
 import android.test.AndroidTestCase;
-import android.util.Log;
 import com.personalzedDiscounts.android.domain.Discount;
 import com.personalzedDiscounts.android.service.DiscountService;
 import junit.framework.Assert;
@@ -17,7 +16,6 @@ public class DiscountServiceTest extends AndroidTestCase {
 
     public void testShouldFetchDiscount() throws Exception {
         Discount discount = service.fetchDiscount("product");
-        Log.i("Discount 2", discount.getOff());
-        Assert.assertEquals(discount.getOff().trim(),"30 %");
+        Assert.assertTrue(discount.getOff().trim().matches("\\d{2} %"));
     }
 }

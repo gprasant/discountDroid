@@ -15,6 +15,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class DiscountService {
+
+    public static final String PERSONALIZED_SERVICE_URL = "http://snoopy.apphb.com/api/discounts?user=user&product=%s";
+
     public Discount fetchDiscount(String product){
         Discount discount = new Discount("error", "error");
         
@@ -35,7 +38,7 @@ public class DiscountService {
     private String getDiscount(String product) {
         StringBuilder builder = new StringBuilder();
         HttpClient client = new DefaultHttpClient();
-        HttpGet httpGet = new HttpGet("http://snoopy.apphb.com/api/discounts?user=user&product=" + product);
+        HttpGet httpGet = new HttpGet(String.format(PERSONALIZED_SERVICE_URL, product));
         httpGet.setHeader("Content-type","application/json");
         try {
             HttpResponse response = client.execute(httpGet);
