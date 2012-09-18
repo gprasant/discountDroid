@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.android.Overlay xmlns:android="http://schemas.android.com/apk/res/android"
+<com.personalzedDiscounts.android.Overlay xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00000000" >
@@ -162,4 +162,4 @@
 	    
     </SlidingDrawer>
 
-</com.example.android.Overlay>
+</com.personalzedDiscounts.android.Overlay>
