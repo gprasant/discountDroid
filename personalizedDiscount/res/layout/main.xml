@@ -10,6 +10,14 @@
         android:layout_height="fill_parent"
         android:layout_gravity="center" >
     </SurfaceView>
+
+    <Button android:id="@+id/aurasma_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ean_info"
+            android:text="@string/aurasma"
+            android:onClick="onAurasmaClick"
+            />
     
     <include layout="@layout/overlay"
         android:id="@+id/overlay"

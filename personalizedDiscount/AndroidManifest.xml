@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.personalzedDiscounts.android"
-          android:versionName="1.0"
+          android:versionName="@string/app_version"
           android:installLocation="preferExternal">
 
     <!--Aurasma uses declarations. These permissions are required for correct starting of the kernel. -->

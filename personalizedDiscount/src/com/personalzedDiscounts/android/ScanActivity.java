@@ -1,6 +1,13 @@
 package com.personalzedDiscounts.android;
 
 import android.content.SharedPreferences;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Intent;
+import android.util.Log;
+import com.aurasma.aurasma.AurasmaIntentFactory;
+import com.aurasma.aurasma.application.AurasmaSetupCallback;
+import com.aurasma.aurasma.exceptions.AurasmaLaunchException;
 import com.moodstocks.android.*;
 
 import android.app.Activity;
@@ -37,8 +44,13 @@ public class ScanActivity extends Activity implements ScannerSession.Listener, V
 	private View touch;
 	private Bundle status;
 	private ProgressDialog searching;
+    private static final boolean DELAY_START = false;
 
-	@Override
+    private static final int DIALOG_PROGRESS = 0;
+    private static final int DIALOG_ERROR = 1;
+
+
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -157,6 +169,46 @@ public class ScanActivity extends Activity implements ScannerSession.Listener, V
 			session.snap();
 		}
 	}
+    public void onAurasmaClick(View v){
+        final Intent aurasmaIntent;
+        try {
+            aurasmaIntent = AurasmaIntentFactory.getAurasmaLaunchIntent(this,
+                    getString(R.string.app_name), getString(R.string.app_version));
+        } catch (AurasmaLaunchException e) {
+            Log.e("AKTest", "Error getting intent", e);
+            showDialog(DIALOG_ERROR);
+            return;
+        }
+
+        if (DELAY_START) {
+            AurasmaSetupCallback callback = new AurasmaSetupCallback() {
+
+                @Override
+                public void onLoaded() {
+                    dismissDialog(DIALOG_PROGRESS);
+                    startActivity(aurasmaIntent);
+                }
+
+                @Override
+                public void onLoadWarning(final int code) {
+                    Log.w("AKTest", "Preload warning: " + code);
+                }
+
+                @Override
+                public void onLoadFail(final int code) {
+                    Log.e("AKTest", "Preload error: " + code);
+                    dismissDialog(DIALOG_PROGRESS);
+                    showDialog(DIALOG_ERROR);
+                }
+            };
+            showDialog(DIALOG_PROGRESS);
+
+            AurasmaIntentFactory.startAurasmaPreload(getApplicationContext(), aurasmaIntent,
+                    callback);
+        } else {
+            startActivity(aurasmaIntent);
+        }
+    }
 	
 	//---------------------------------
 	// ProgressDialog.OnCancelListener
@@ -169,6 +221,25 @@ public class ScanActivity extends Activity implements ScannerSession.Listener, V
 			session.cancel();
 		}
 	}
+    @Override
+    protected Dialog onCreateDialog(final int id, final Bundle args) {
+        if (id == DIALOG_PROGRESS) {
+            ProgressDialog dialog = new ProgressDialog(this);
+            dialog.setMessage("Aurasma is loading");
+            dialog.setIndeterminate(true);
+            dialog.setCancelable(false);
+            return dialog;
+        } else if (id == DIALOG_ERROR) {
+            return new AlertDialog.Builder(this).setCancelable(true).setMessage(
+                    "Error starting Aurasma").setPositiveButton(android.R.string.ok,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(final DialogInterface d, final int i) {
+                        }
+                    }).create();
+        }
+        return super.onCreateDialog(id);
+    }
 	
 	
 }

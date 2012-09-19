@@ -6,4 +6,6 @@
     <string name="home_scan">Scan</string>
     <string name="scan_name">ScanActivity</string>
     <string name="please_login">Please login with facebook to continue</string>
+    <string name="aurasma">Aurasma</string>
+    <string name="app_version">1.0.0</string>
 </resources>
