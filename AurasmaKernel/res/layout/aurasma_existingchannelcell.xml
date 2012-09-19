@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_row_layout"
+    style="@style/aurasma_blueLozenge"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/aurasma_icon"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/aurasma_icon"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingLeft="4sp" >
+
+        <TextView
+            android:id="@+id/aurasma_list_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@drawable/aurasma_blue_lozenge_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/aurasma_username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@drawable/aurasma_blue_lozenge_text"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</RelativeLayout>

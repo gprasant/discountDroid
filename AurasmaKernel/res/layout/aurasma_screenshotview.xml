@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/aurasma_screenshotBitmap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/aurasma_dark_grey_box"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/aurasma_shareScreenshotTwitterButton"
+            style="@style/aurasma_roundedBlueButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/aurasma_sendscreenshottwittertext"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/aurasma_shareScreenshotfacebookButton"
+            style="@style/aurasma_roundedBlueButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/aurasma_sendscreenshotfacebooktext"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/aurasma_saveScreenshotButton"
+            style="@style/aurasma_roundedBlueButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/aurasma_savescreenshottext"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+</RelativeLayout>

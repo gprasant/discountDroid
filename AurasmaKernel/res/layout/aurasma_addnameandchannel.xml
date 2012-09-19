@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.ui.AurasmaWindowView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.aurasma.aurasma.addaura.AddNameAndChannelView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/aurasma_addNameUI"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/aurasma_bg_blue_tiled"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/aurasma_giveName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:gravity="center"
+            android:text="@string/aurasma_anywehereNameTitleText" />
+
+        <EditText
+            android:id="@+id/aurasma_newAuraTitle"
+            style="@style/aurasma_whiteTextBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:hint="@string/aurasma_standardAnywehereTitle"
+            android:scrollHorizontally="true"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/aurasma_channelsSection"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/aurasma_chooseChannelText" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/aurasma_lastChannelButton"
+                    style="@style/aurasma_roundedBlueButtonLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/aurasma_defaultChannelButtonText" />
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/aurasma_dark_gray_line" />
+
+                <Button
+                    android:id="@+id/aurasma_existingChannelButton"
+                    style="@style/aurasma_roundedBlueButtonCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/aurasma_existingChannelButtonText" />
+
+                <ImageView
+                    android:layout_width="3dp"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/aurasma_dark_gray_line" />
+
+                <Button
+                    android:id="@+id/aurasma_newChannelButton"
+                    style="@style/aurasma_roundedBlueButtonRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/aurasma_newChannelButtonText" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@+id/aurasma_channelIcon"
+                    android:gravity="center|right"
+                    android:text="@string/aurasma_selectedChannelText" />
+
+                <ImageView
+                    android:id="@+id/aurasma_channelIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/aurasma_channelNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@+id/aurasma_channelIcon"
+                    android:gravity="center|left"
+                    android:maxWidth="150sp"
+                    android:singleLine="true"
+                    android:text="@string/aurasma_blankChannelNameText" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/aurasma_blankView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/aurasma_doneNamingButton"
+                style="@style/aurasma_roundedBlueButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/aurasma_doneNametext" />
+        </LinearLayout>
+    </com.aurasma.aurasma.addaura.AddNameAndChannelView>
+
+</com.aurasma.aurasma.ui.AurasmaWindowView>

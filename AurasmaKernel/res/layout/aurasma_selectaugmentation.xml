@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.ui.AurasmaWindowView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.aurasma.aurasma.addaura.SelectAugmentationView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/aurasma_selectAugmentationUI"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/aurasma_bg_blue_tiled"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="0px" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/aurasma_blue_gradient"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:singleLine="true" >
+
+            <EditText
+                android:id="@+id/aurasma_searchForAuraText"
+                style="@style/aurasma_whiteTextBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/aurasma_searchForAuraHint"
+                android:scrollHorizontally="true"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/aurasma_searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#00000000"
+                android:cropToPadding="true"
+                android:gravity="center_horizontal"
+                android:src="@drawable/aurasma_search_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/aurasma_blue_gradient"
+            android:orientation="horizontal"
+            android:padding="2dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/aurasma_sourcetext"
+                android:textColor="@color/aurasma_dark_button_text"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/aurasma_aurasmaButton"
+                style="@style/aurasma_roundedBlueButtonLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/aurasma_searchaurasmabuttontext"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="3dp"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/aurasma_dark_gray_line" />
+
+            <Button
+                android:id="@+id/aurasma_androidButton"
+                style="@style/aurasma_roundedBlueButtonRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/aurasma_searchandroidbuttontext"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/aurasma_selectAugRadioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/aurasma_blue_gradient"
+            android:checkedButton="@+id/aurasma_allOption"
+            android:orientation="horizontal"
+            android:paddingBottom="1dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp" >
+
+            <RadioButton
+                android:id="@+id/aurasma_animOption"
+                style="@style/aurasma_radioButton"
+                android:text="@string/aurasma_searchanimationbuttontext" />
+
+            <RadioButton
+                android:id="@+id/aurasma_imageOption"
+                style="@style/aurasma_radioButton"
+                android:text="@string/aurasma_searchimagebuttontext" />
+
+            <RadioButton
+                android:id="@+id/aurasma_threeDOption"
+                style="@style/aurasma_radioButton"
+                android:text="@string/aurasma_searchthreedbuttontext" />
+
+            <RadioButton
+                android:id="@+id/aurasma_blinkxOption"
+                style="@style/aurasma_radioButton"
+                android:text="@string/aurasma_searchblinkxbuttontext" />
+
+            <RadioButton
+                android:id="@+id/aurasma_allOption"
+                style="@style/aurasma_radioButton"
+                android:text="@string/aurasma_searchallbuttontext" />
+        </RadioGroup>
+
+        <com.aurasma.aurasma.ui.ScrollableListView
+            android:id="@id/android:list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="visible" />
+    </com.aurasma.aurasma.addaura.SelectAugmentationView>
+
+</com.aurasma.aurasma.ui.AurasmaWindowView>

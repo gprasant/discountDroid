@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" >
+        <shape
+          android:shape="rectangle"
+          android:padding="5dp">
+          <gradient
+                android:startColor="@color/aurasma_dark_button_light"
+                android:endColor="@color/aurasma_dark_button_dark"
+                android:angle="90" />
+            <corners
+                android:radius="10dp" />
+            <stroke
+				        android:width="2dp"
+				        android:color="@color/aurasma_dark_button_outline" />
+                
+        </shape>
+    </item>
+    <item android:state_pressed="false" >
+        <shape
+          android:shape="rectangle"
+          android:padding="5dp">
+            <gradient
+                android:startColor="@color/aurasma_dark_button_light"
+                android:endColor="@color/aurasma_dark_button_dark"
+                android:angle="270" />
+            <corners
+                android:radius="10dp" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/aurasma_dark_button_outline" />
+        </shape>
+    </item>
+</selector>

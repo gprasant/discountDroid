@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.ui.AurasmaWindowView android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+    android:id="@+id/aurasma_container"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/aurasma_bg_blue_tiled"
+        android:padding="30dp"
+        >
+    <TextView android:id="@+id/aurasma_register_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#ffffff"
+              android:textSize="16sp"
+              android:text="@string/aurasma_SignInRequiredForFeature"
+              android:layout_gravity="center_horizontal"
+            />
+    <Button
+            android:id="@+id/aurasma_register_button"
+            style="@style/aurasma_roundedBlueButton"
+            android:text="@string/aurasma_Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            />
+</LinearLayout>
+</com.aurasma.aurasma.ui.AurasmaWindowView>

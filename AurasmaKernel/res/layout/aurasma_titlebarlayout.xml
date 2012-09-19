@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:id="@+id/aurasma_titleBarContainer"
+                android:background="@drawable/aurasma_blue_gradient"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@+id/aurasma_titleBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:layout_centerInParent="true"
+        android:background="#0000"/>
+
+</RelativeLayout>

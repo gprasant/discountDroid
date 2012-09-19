@@ -1,0 +1,78 @@
+<com.aurasma.aurasma.ui.AurasmaWindowView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/aurasma_loginContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/aurasma_bg_blue_tiled"
+        android:orientation="vertical" >
+
+        <!-- user name -->
+
+        <EditText
+            android:id="@+id/aurasma_txt_username"
+            style="@style/aurasma_whiteTextBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/aurasma_Username"
+            android:singleLine="true" />
+        <!-- password -->
+
+        <EditText
+            android:id="@+id/aurasma_txt_password"
+            style="@style/aurasma_whiteTextBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/aurasma_Password"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/aurasma_txt_confirm_password"
+            style="@style/aurasma_whiteTextBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/aurasma_confirm_password"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+        <!-- email -->
+
+        <EditText
+            android:id="@+id/aurasma_txt_email"
+            style="@style/aurasma_whiteTextBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/aurasma_Email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
+        <!-- SignIn/New Account button -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="20dp" >
+
+            <Button
+                android:id="@+id/aurasma_btnAction"
+                style="@style/aurasma_roundedBlueButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/aurasma_CreateAccount" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.aurasma.aurasma.ui.AurasmaWindowView>

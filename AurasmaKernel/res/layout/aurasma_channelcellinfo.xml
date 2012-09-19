@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/aurasma_privacyRadioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" >
+
+        <RadioButton
+            android:id="@+id/aurasma_publicRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="60dp"
+            android:paddingTop="5dp"
+            android:text="@string/aurasma_privacyPublic" />
+
+        <RadioButton
+            android:id="@+id/aurasma_privateRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="60dp"
+            android:paddingTop="5dp"
+            android:text="@string/aurasma_privacyPrivate" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/aurasma_deleteChannelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/aurasma_deleteChannelButton" />
+
+</LinearLayout>

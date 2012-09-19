@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.ui.ViewStackController xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_viewStack"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.aurasma.aurasma.trackingar.AurasmaMainView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@id/aurasma_mainView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <!-- Stuff here won't be constrained to the aspect Ratio of the camera, so will fill the whole screen -->
+
+    <com.aurasma.aurasma.ui.CustomContentView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        layout="@layout/aurasma_takepictureforanywhereview2" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/aurasma_happeningTrayContainer"
+        layout="@layout/aurasma_happeningtray" />
+
+    <com.aurasma.aurasma.ui.ConnectivityView
+        android:id="@+id/aurasma_connectivityId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:src="@drawable/aurasma_connectivity_wifi"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/aurasma_emailBuildButton"
+        style="@style/aurasma_roundedBlueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:text="@string/aurasma_send_test_email"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/aurasma_channels"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:cropToPadding="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/aurasma_channels_btn"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/aurasma_add_happening"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:cropToPadding="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/aurasma_newhappen_btn"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/aurasma_screenshot_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:cropToPadding="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/aurasma_screenshot_btn"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/aurasma_share_aura"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:cropToPadding="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/aurasma_ft_btn"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/aurasma_delete_aura"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:cropToPadding="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/aurasma_trash_btn"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/aurasma_rate_aura_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:cropToPadding="false"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/aurasma_rating_btn"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/aurasma_game_banner_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/aurasma_game_splash_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/aurasma_final_score_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Score!"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/aurasma_score_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/aurasma_rounded_textview_shape"
+            android:padding="10dp"
+            android:text="Score!"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</com.aurasma.aurasma.ui.ViewStackController>

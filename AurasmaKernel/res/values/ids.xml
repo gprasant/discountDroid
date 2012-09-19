@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Id for AurasmaMainView component to be used in the content view layout for a MainActivity subclass -->
+    <item name="aurasma_mainView" type="id"/>
+
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" >
+        <shape
+          android:shape="rectangle"
+          android:padding="5dp">
+            <gradient
+                android:startColor="@color/aurasma_medium_button_light"
+                android:endColor="@color/aurasma_medium_button_dark"
+                android:angle="270" />
+            <corners
+                android:topLeftRadius="10dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="10dp" />
+        </shape>
+    </item>
+    <item android:state_selected="true" >
+        <shape
+          android:shape="rectangle"
+          android:padding="5dp">
+            <gradient
+                android:startColor="@color/aurasma_medium_button_light"
+                android:endColor="@color/aurasma_medium_button_dark"
+                android:angle="270" />
+            <corners
+                android:topLeftRadius="10dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="10dp" />
+        </shape>
+    </item>
+    <item android:state_selected="false" >
+        <shape
+          android:shape="rectangle"
+          android:padding="5dp">
+            <gradient
+                android:startColor="@color/aurasma_light_button_light"
+                android:endColor="@color/aurasma_light_button_dark"
+                android:angle="270" />
+            <corners
+                android:topLeftRadius="10dp"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="10dp" />
+        </shape>
+    </item>
+</selector>

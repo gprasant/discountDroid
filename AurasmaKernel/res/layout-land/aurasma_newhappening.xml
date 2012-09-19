@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.addaura.AddHappeningView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_newHappeningUI"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <EditText
+        android:id="@+id/aurasma_newHappeningTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/aurasma_happeningdefaulttitle"
+        android:scrollHorizontally="true"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/aurasma_newHappeningChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/aurasma_choosehappeningchannel" />
+
+        <Button
+            android:id="@+id/aurasma_newChannelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:minWidth="100dp"
+            android:text="@string/aurasma_newbutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/aurasma_happeningPhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_augphotobuttontext" />
+
+        <Button
+            android:id="@+id/aurasma_happeningVideoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_augvideobuttontext" />
+
+        <Button
+            android:id="@+id/aurasma_happeningBlinkxButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_augblinkxbuttontext" />
+
+        <Button
+            android:id="@+id/aurasma_happeningLibraryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_auglibbuttontext" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <ProgressBar
+            android:id="@+id/aurasma_previewLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/aurasma_happeningPreview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/aurasma_happeningSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_happeningSavebuttontext" />
+
+        <Button
+            android:id="@+id/aurasma_happeningCancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_cancelbuttontext" />
+    </LinearLayout>
+
+</com.aurasma.aurasma.addaura.AddHappeningView>

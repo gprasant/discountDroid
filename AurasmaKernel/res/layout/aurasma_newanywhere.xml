@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.addaura.AddAnywhereView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_newAnywhereUI"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <EditText
+        android:id="@+id/aurasma_newAnywhereTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/aurasma_anywheredefaulttitle"
+        android:scrollHorizontally="true"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/aurasma_anywherePhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_augphotobuttontext" />
+
+        <Button
+            android:id="@+id/aurasma_anywhereVideoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_augvideobuttontext" />
+
+        <Button
+            android:id="@+id/aurasma_anywhereBlinkxButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_augblinkxbuttontext" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <ProgressBar
+            android:id="@+id/aurasma_previewLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/aurasma_anywherePreview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/aurasma_anywhereSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_anywhereSavebuttontext" />
+
+        <Button
+            android:id="@+id/aurasma_anywhereCancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aurasma_cancelbuttontext" />
+    </LinearLayout>
+
+</com.aurasma.aurasma.addaura.AddAnywhereView>

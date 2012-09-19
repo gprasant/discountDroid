@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="aurasma_trackingActivityName">com.aurasma.aurasma.trackingar.TrackingActivity</string>
+    
+    <!-- login activity -->
+    <string name="aurasma_loginActivityName">Create Aurasma Account</string>
+    <string name="aurasma_ExistingAccount">Existing account</string>
+    <string name="aurasma_ExistingAccountSubtext">select to use existing account</string>
+    <string name="aurasma_Username">User name</string>
+    <string name="aurasma_Password">Password</string>
+    <string name="aurasma_confirm_password">Confirm Password</string>
+    <string name="aurasma_Email">Email</string>
+    <string name="aurasma_CreateAccount">Create Account</string>
+    <string name="aurasma_LoginFailure">Sorry, unable to login</string>
+    <string name="aurasma_InvalidEmailAddress">Sorry, the email address is invalid</string>
+    <string name="aurasma_InvalidUsername">Sorry, the user name is invalid. It should be at least 3 characters long and allowed characters are: letters, numbers and .-_</string>
+    <string name="aurasma_InvalidPassword">Sorry, the password is invalid. It cannot be blank.</string>
+    <string name="aurasma_noMatchPassword">Sorry, the passwords do not match. Please try again.</string>
+    <string name="aurasma_InvalidUsernameOrPassword">There was a problem with your chosen username, password or email - please try again</string>
+    <string name="aurasma_Signin">Sign In</string>
+    <string name="aurasma_Signout">Sign Out</string>
+    <string name="aurasma_SignInRequiredForFeature">"To use this feature you need to register. Registering is free and you don't even have to give an email address."</string>
+    <string name="aurasma_SignInRequiredForChannelSubscription">"To subscribe to the channel you need to register.\nRegistering is free and you don't even have to give an email address. Would you like to register?"</string>
+    <string name="aurasma_Register">Register</string>
+    <string name="aurasma_AddAuraActivityName">Enter details for Aura</string>
+    <string name="aurasma_SelectAugmentationActivity">Add Aura</string>
+    <string name="aurasma_AddChannelActivityName">Enter details for channel</string>
+    <string name="aurasma_ExistingChannelActivity">Select a Channel</string>
+    <string name="aurasma_AugmentationSearchName">Select an accessory to add</string>
+    <string name="aurasma_BlinkxSearchName">Select a blinkx video to add</string>
+    <string name="aurasma_AnywheresTabBarName">View Auras</string>
+    <string name="aurasma_ChannelsTabBarName">View Channels</string>
+    <string name="aurasma_focusCameratext">Focus</string>
+    <string name="aurasma_AutoFocusHintText">Tap Screen to Focus</string>
+    <string name="aurasma_person_detection_mode">Person Detection Mode</string>
+    <string name="aurasma_person_detection">Detect Person</string>
+    <string name="aurasma_AnywhereCreationInfo">Creating an Aura \nCan be viewed anywhere</string>
+    <string name="aurasma_HappeningCreationInfo">Creating a Location Aura \nCan only be viewed at this location</string>
+    <string name="aurasma_ok">@android:string/ok</string>
+    <string name="aurasma_error_dialog">Sorry, an Error occurred!</string>
+    <string name="aurasma_out_of_memory_error">Sorry, unable to download at this time.</string>
+    <string name="aurasma_aurasmaWebsiteUrl">http://www.aurasma.com</string>
+    <string name="aurasma_errorOops">Oops!</string>
+    <string name="aurasma_errorWarning">Warning</string>
+    <string name="aurasma_error_text">Error</string>
+    <string name="aurasma_confirm_text">Confirm</string>
+    <string name="aurasma_error_dialog_button1">Retry</string>
+    <string name="aurasma_error_dialog_button2">Close App</string>
+    <string name="aurasma_strUserProfile">User Profile</string>
+    <string name="aurasma_AnywhereLimitExceeded">Unable to create Aura\nMaximum non-location aura limit reached</string>
+    <string name="aurasma_auraWorldCropFailed">Sorry something went wrong when choosing the area used in your photo. Please try again.</string>
+    <string name="aurasma_auraWorldOutOfMemory">Sorry something went wrong when taking the photo. Please try again.</string>
+    <string name="aurasma_anywhereWorldCreateFailed">The training on your photo failed. Please try again.</string>
+    <string name="aurasma_auraCreateFailed">"Your Aura failed to be added to Aurasma Central."</string>
+    <string name="aurasma_anywhereBlinkxUploadFailed">blinkx Video Upload Failed. Please try again.</string>
+    <string name="aurasma_anywhereUploadTooLarge">File is too large to be uploaded. Please select another video</string>
+    <string name="aurasma_unsupportedVideoFormat">Sorry, this video is of an incompatible format. Please select another video</string>
+    <string name="aurasma_anywhereUploadFailed">File Upload failed. Please try again.</string>
+    <string name="aurasma_auraCreated">"Your Aura, %1s, is now available on your device."</string>
+    <!-- Error messages -->
+    <string name="aurasma_loginAuthenticationError">There was a login problem - please check your username and password</string>
+    <string name="aurasma_networkError">Having a problem talking to Aurasma Central – please check your signal strength or network setting and try again</string>
+    <string name="aurasma_networkStartError">Aurasma requires internet access the first time it is run. Please check your network connection and try again.</string>
+    <string name="aurasma_usernameTakenError">That username has been taken - please pick another</string>
+    <string name="aurasma_loginCookieError">Your login cookie has expired. Please login again.</string>
+    <string name="aurasma_databaseError">Unable to search local database</string>
+    <string name="aurasma_basicDownloadManagerError">There was a problem downloading from Aurasma Central</string>
+    <string name="aurasma_searchError">Unable to perform search. Please try again later.</string>
+    <string name="aurasma_nativeCodeError">Sorry, Aurasma is incompatible with your device.</string>
+    <string name="aurasma_noPreviewSizeError">Sorry, your camera is not configured properly for Aurasma.</string>
+    <string name="aurasma_generalCameraError">Sorry, there was a problem opening the camera on your device. Please try restarting Aurasma.</string>
+    <string name="aurasma_cameraBeingUsedError">There is another application using the camera. Please close down any application that may be using the camera.</string>
+    <string name="aurasma_sdCardError">Sorry, Aurasma is unable to access your SD card. Please turn off USB storage or reinsert the SD card.</string>
+    <string name="aurasma_noLocationError">Aurasma cannot determine your location accurately enough to create a Location Aura. \nPlease check Location services are enabled, if they are, it may take a few minutes to find a valid location.\nYou can, however, always create a non-location aura.</string>
+    <string name="aurasma_noLocationWarning">To work properly, Aurasma needs location services to be enabled. To enable, go to Settings > Location &amp; security.</string>
+    <string name="aurasma_imageExistsWarning">Sorry this image has already been trained. Please take a picture of another object to create your Aura.</string>
+    <string name="aurasma_auraNoTitleError">You must set a title for the Aura</string>
+    <string name="aurasma_auraNoAugError">You must choose an accessory for your Aura\nIf an upload is in progress, please wait for it to finish</string>
+    <string name="aurasma_augErrorPosition">There was a problem loading this aura, please select another.</string>
+    <string name="aurasma_augErrorTracking">There was a problem loading this aura.</string>
+    <string name="aurasma_happeningNoChannelError">You must set a channel for the Location Aura</string>
+    <string name="aurasma_channelNoTitleOrImageError">You must set a title and image for the channel</string>
+    <string name="aurasma_channelNoTitleError">You must set a title for the channel</string>
+    <string name="aurasma_channelNoImageError">You must set an image for the channel</string>
+    <string name="aurasma_cannotloadlinkerror">Sorry, this content is not available on this device</string>
+    <string name="aurasma_noSDCardSpaceError">Sorry, there is insufficient space on your SD Card to start Aurasma - please free some space and try again.</string>
+    <string name="aurasma_lowSDCardSpaceError">Your SD Card is running low on space which may cause Aurasma to not fully work - please free some space and try again.</string>
+    <string name="aurasma_noTrActInManifestError">Cannot find com.aurasma.aurasma.trackingar.TrackingActivity in the Manifest.</string>
+    <string name="aurasma_webCacheError">Sorry, there was a problem launching help. Please visit our website for further help.</string>
+    <string name="aurasma_screenshotFailed">Sorry, unable to create screenshot.</string>
+    <string name="aurasma_screenshotUploadFailed">Sorry, unable to upload screenshot. Please try again.</string>
+    <string name="aurasma_actionError">Unable to execute this action.</string>
+    
+    <string name="aurasma_chooseMedia">Choose Media</string>
+    <string name="aurasma_maps">Location Auras</string>
+    <string name="aurasma_settings">Settings</string>
+    <string name="aurasma_channels">Channels</string>
+    <string name="aurasma_happening">Add Location Aura</string>
+    <string name="aurasma_just_happening">Location Aura</string>
+    <string name="aurasma_anywhere">Add Aura</string>
+    <string name="aurasma_just_anywhere">Aura</string>
+    <string name="aurasma_aura">Add Aura</string>
+    <string name="aurasma_create">Create</string>
+    <string name="aurasma_help">Help</string>
+    <string name="aurasma_current_anywheres">Current Auras</string>
+    <string name="aurasma_download_error">Download error</string>
+    <string name="aurasma_download_received">Data Received</string>
+
+    <!-- Channel strings -->
+    <string name="aurasma_addChannelButton">Add Channel</string>
+    <string name="aurasma_deleteChannelButton">Delete Channel</string>
+    <string name="aurasma_setPrivacyHeader">"Set %1$s's Privacy"</string>
+    <string name="aurasma_privacyPublic">Public</string>
+    <string name="aurasma_privacyPrivate">Private</string>
+    <string name="aurasma_channelPrivacyChangeSuccess">The privacy for %1$s is now set to be %2$s</string>
+    <string name="aurasma_channelPrivacyChangeError">"The channel's privacy could not be changed at this time."</string>
+    <string name="aurasma_channelDeleteError">The channel could not be deleted. Please check network connectivity and try again.</string>
+    <string name="aurasma_subscribeWaitMessage">Updating your channel subscriptions…</string>
+    <string name="aurasma_subscribeChangeError">Failed in saving subscription changes</string>
+    <string name="aurasma_unSubscribeQuestion">Are you sure you want to unsubscribe from %1$s?</string>
+    <string name="aurasma_showRouteButtonText">Show Route</string>
+    <string name="aurasma_noSuperAnywheres">"No Super Auras downloaded yet.\n Please wait a minute"</string>
+    <string name="aurasma_noMyAnywheres">No Auras have been created or shared yet.</string>
+    <string name="aurasma_noSubscribedChannels">You have not subscribed to any channels yet.</string>
+    <string name="aurasma_noNearbyChannels">No nearby channels have been downloaded yet. \nEnable location services to find Auras near you.</string>
+    <string name="aurasma_noPopularChannels">No popular channels have been downloaded yet.</string>
+    <string name="aurasma_noRecommendedChannels">No recommended channels have been downloaded yet.</string>
+    <string name="aurasma_noRecentChannels">No recent channels have been downloaded yet.</string>
+    <string name="aurasma_channelSearchPrompt">Search for channels</string>
+    <string name="aurasma_noSearchChannels">No channels found</string>
+
+    <!-- Channel Info strings -->
+    <string name="aurasma_by">by</string>
+    <string name="aurasma_aurasInThisChannel">"Auras in this channel:"</string>
+    <string name="aurasma_noAurasInThisChannel">"No Auras in this channel"</string>
+    <string name="aurasma_couldnotgetaurasError">Sorry, could not retrieve the auras for this channel</string>
+    <string name="aurasma_noAurasretrieved">"No Auras retrieved for this channel"</string>
+    <string name="aurasma_mapViewButtonText">MAP VIEW</string>
+    <string name="aurasma_makePublicButtonText">MAKE PUBLIC</string>
+    <string name="aurasma_makePrivateButtonText">MAKE PRIVATE</string>
+    <string name="aurasma_subscribeButtonText">SUBSCRIBE</string>
+    <string name="aurasma_unsubscribeButtonText">UNSUBSCRIBE</string>
+    <string name="aurasma_deleteButtonText">DELETE</string>
+    <string name="aurasma_shareButtonText">SHARE</string>
+    
+    <string name="aurasma_happeningdefaulttitle">Enter a title for this Location Aura</string>
+    <string name="aurasma_choosehappeningchannel">Select a channel for this Location Aura</string>
+    <string name="aurasma_anywheredefaulttitle">Enter a title for this Aura</string>
+    <string name="aurasma_augphotobuttontext">Upload Image</string>
+    <string name="aurasma_augvideobuttontext">Upload Video</string>
+    <string name="aurasma_auglibbuttontext">Search Library</string>
+    <string name="aurasma_augblinkxbuttontext">Search blinkx videos</string>
+    <string name="aurasma_happeningSavebuttontext">Add Location Aura</string>
+    <string name="aurasma_anywhereSavebuttontext">Add Aura</string>
+    <string name="aurasma_createChannelTitle">New Channel</string>
+    <string name="aurasma_channelSavebuttontext">Create Channel</string>
+    <string name="aurasma_cancelbuttontext">@android:string/cancel</string>
+    <string name="aurasma_positionAuraTitle">Position Aura</string>
+    <string name="aurasma_positionAuraGuide">Move, Resize or Rotate to change</string>
+    <string name="aurasma_createhappeningtext">Create!</string>
+    <string name="aurasma_channeldefaulttitle">Title</string>
+    <string name="aurasma_channeldescription">Optional description</string>
+    <string name="aurasma_auraCreatingToast">Your Aura is being processed and will be available shortly.</string>
+
+    <!-- Select Augmentation strings -->
+    <string name="aurasma_searchForAuraHint">Search for Auras</string>
+    <string name="aurasma_sourcetext">Source:</string>
+    <string name="aurasma_searchaurasmabuttontext">Aurasma</string>
+    <string name="aurasma_searchandroidbuttontext">My Android</string>
+    <string name="aurasma_searchanimationbuttontext">Animation</string>
+    <string name="aurasma_searchimagebuttontext">Image</string>
+    <string name="aurasma_searchthreedbuttontext">3D</string>
+    <string name="aurasma_searchblinkxbuttontext">blinkx Video</string>
+    <string name="aurasma_searchallbuttontext">All</string>
+    <string name="aurasma_photo">Photo</string>
+    <string name="aurasma_video">Video</string>
+
+    <!-- Add Name And Channel strings -->
+    <string name="aurasma_standardAnywehereTitle">"My Aura"</string>
+    <string name="aurasma_anywehereNameTitleText">"Give your Aura a name"</string>
+    <string name="aurasma_happeningNameTitleText">"Give your Location Aura a name"</string>
+    <string name="aurasma_chooseChannelText">"Now choose a channel"</string>
+    <string name="aurasma_defaultChannelButtonText">"Default"</string>
+    <string name="aurasma_lastChannelButtonText">"Last"</string>
+    <string name="aurasma_existingChannelButtonText">"Existing"</string>
+    <string name="aurasma_newChannelButtonText">"New"</string>
+    <string name="aurasma_selectedChannelText">"Selected Channel:"</string>
+    <string name="aurasma_blankChannelNameText">"My Channel"</string>
+    <string name="aurasma_errorDownloadingChannels">"Sorry, unable to create a Location Aura at this time. Please try again in a few minutes."</string>
+    <string name="aurasma_doneNametext">Next</string>
+
+    <!-- Channel Tab names -->
+    <string name="aurasma_myAurasTab">My Auras</string>
+    <string name="aurasma_superAurasTab">Super Auras</string>
+    <string name="aurasma_mapTab">Location Auras</string>
+    <string name="aurasma_myChannelsTab">My Channels</string>
+    <string name="aurasma_subscribedTab">Subscribed Channels</string>
+    <string name="aurasma_nearbyTab">Nearby Channels</string>
+    <string name="aurasma_popularTab">Popular Channels</string>
+    <string name="aurasma_recommendedTab">Recommended Channels</string>
+    <string name="aurasma_recentTab">Recent Channels</string>
+    <string name="aurasma_searchTab">Search Channels</string>
+    <string name="aurasma_subscribedTabName">Subscribed</string>
+    <string name="aurasma_nearbyTabName">Nearby</string>
+    <string name="aurasma_popularTabName">Popular</string>
+    <string name="aurasma_recommendedTabName">Recommended</string>
+    <string name="aurasma_recentTabName">Recent</string>
+    <string name="aurasma_searchTabName">Search</string>
+    
+    <string name="aurasma_augSearchHint">Search Augmentations</string>
+    <string name="aurasma_blinkxSearchHint">Search blinkx Videos</string>
+    <string name="aurasma_mapSearchHint">Search Map</string>
+    <string name="aurasma_editanywherebuttontext">Edit</string>
+    <string name="aurasma_doneanywherebuttontext">Done</string>
+    <string name="aurasma_sendanywheresmsmenutext">Send Aura via SMS</string>
+    <string name="aurasma_sendanywhereemailmenutext">Send Aura via email</string>
+    <string name="aurasma_sendanywheretwittermenutext">Send Aura via Twitter</string>
+    <string name="aurasma_sendanywherefacebookmenutext">Send Aura via Facebook</string>
+    <string name="aurasma_sendscreenshottwittertext">Share via Twitter</string>
+    <string name="aurasma_sendscreenshotfacebooktext">Share via Facebook</string>
+    <string name="aurasma_savescreenshottext">Save to Gallery</string>
+    <string name="aurasma_savescreenshotsavedtoasttext">Screenshot saved</string>
+    <string name="aurasma_savescreenshotsavefailed">Screenshot saving failed. Please try again.</string>
+    <string name="aurasma_twitterscreenshottext">Check out my new Aurasma Screenshot</string>
+    <string name="aurasma_helpMainActivity">Help</string>
+    <string name="aurasma_scrollHelpActivity">Help</string>
+    <string name="aurasma_helpMenuButtontext">Menu</string>
+    <string name="aurasma_helpDoneButtontext">Done</string>
+    <string name="aurasma_send_test_email">Test Email</string>
+    <string name="aurasma_sendanywhereemailsubject">Check out my Aurasma Aura</string>
+    <string name="aurasma_sendanywherebodytext1">"I've just shared an Aurasma experience (an Aura) with you. Here's how to find it:\n
+[Enter a short description here]\n
+Now, it's easy to get it:\n
+1) Open this email on your device and click the link below.\n
+2) If you don't have Aurasma installed, the link will take you to the iOS App Store or Android Market; install the app then come back and click the link again.\n
+3) The link will launch Aurasma, and share my Aura with you (which may take a while depending on your network speed).\n
+4) As soon as the sharing is complete, follow my instructions above to find it.\n\n%1$s\n\nAurasma allows you to see the world differently where everyday objects can become animated when viewed through an iPad 2, iPhone 4 or Android Smartphone."</string>
+    <string name="aurasma_twitterauratext">Check out my new Aurasma Aura</string>
+    <string name="aurasma_receivedSharedAnywherePending">Your new shared Aura will be ready in a few minutes</string>
+    <string name="aurasma_receivedSharedAnywhere">Your new shared Aura is now ready for viewing</string>
+    <string name="aurasma_receivedSharedAnywhereFailure">Sorry, something went wrong when sharing the Aura - please try again. Have you copied in the full link into the browser?</string>
+    <string name="aurasma_sharedChannelPending">Now subscribing to your new channel %1$s</string>
+    <string name="aurasma_sharedChannelAlreadySubscribed">You are already subscribed to the channel %1$s</string>
+    <string name="aurasma_sharedAuraAlreadySubscribed">You already have this shared aura.</string>
+    <string name="aurasma_sharedChannelFailure">Sorry, something went wrong when subscribing to the channel.</string>
+    <string name="aurasma_augmentationblanksearch">Search for content</string>
+    <string name="aurasma_searchbuttontext">Search</string>
+    <string name="aurasma_augmentationnosearch">Perform a search to find content.</string>
+    <string name="aurasma_augmentationnoresults">Sorry, no matches were found. Try a different search.</string>
+    <string name="aurasma_mapsMapButton">Map</string>
+    <string name="aurasma_mapsSatelliteButton">Satellite</string>
+    <string name="aurasma_mapsLocationButton">My Location</string>
+    <string name="aurasma_mapsGoogleMapsUri">http://maps.google.com/maps</string>
+    <string name="aurasma_mapsGoogleMapsStartAddr">saddr</string>
+    <string name="aurasma_mapsGoogleMapsDestAddr">daddr</string>
+    <string name="aurasma_rateAuraTitle">Rate this Aura</string>
+    <string name="aurasma_rateAuraMessage">"Like this Aura? Give it a rating by selecting a number of stars and then clicking on 'Rate'."</string>
+    <string name="aurasma_rateButtonText">Rate</string>
+    <string name="aurasma_center">Center</string>
+    <string name="aurasma_tracker">Track</string>
+    <string name="aurasma_view">View</string>
+    <string name="aurasma_newbutton">New</string>
+    <string name="aurasma_wait_message">Please wait…</string>
+    <string name="aurasma_load_message">Loading…</string>
+    <string name="aurasma_upload_message">Uploading data…</string>
+    <string name="aurasma_retrieve_message">Retrieving data…</string>
+    <string name="aurasma_delete_message">Deleting %1$s…</string>
+    <string name="aurasma_delete_confirmation_message">Are you sure you want to delete %1$s?</string>
+    <string name="aurasma_delete_error">Sorry, failed to delete the Aura. Please check your network connection.</string>
+    <string name="aurasma_location_services_off_error">Location Services are required to use this service. Go to Settings to enable Location Services for this app.</string>
+    <string name="aurasma_location_services_on_error">Unable to determine location. Location Services are required to use this service.</string>
+</resources>

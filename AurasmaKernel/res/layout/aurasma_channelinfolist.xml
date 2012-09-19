@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.ui.AurasmaWindowView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/aurasma_channel_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/aurasma_bg_blue_tiled"
+        android:paddingBottom="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="0dp" >
+
+        <com.aurasma.aurasma.ui.ScrollableListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <ProgressBar
+            android:id="@+id/aurasma_progress_large"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</com.aurasma.aurasma.ui.AurasmaWindowView>

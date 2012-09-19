@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.ui.AurasmaWindowView android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+    android:id="@+id/aurasma_container"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+<WebView android:id="@+id/aurasma_content"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:clickable="true"
+			/>
+</com.aurasma.aurasma.ui.AurasmaWindowView>

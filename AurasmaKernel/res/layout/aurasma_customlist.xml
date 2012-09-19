@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/aurasma_searchBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/aurasma_blue_gradient"
+        android:orientation="horizontal"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/aurasma_EditText01"
+            style="@style/aurasma_whiteTextBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/aurasma_channelSearchPrompt"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/aurasma_searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/aurasma_search_button" />
+        <Button
+            style="@style/aurasma_roundedBlueButton"
+            android:id="@+id/aurasma_searchCancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:text="@string/aurasma_cancelbuttontext"
+            android:visibility="gone"
+            android:layout_margin="0dp"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="0dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="0dip" >
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="60dp"
+            android:text="@string/aurasma_noMyAnywheres"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <com.aurasma.aurasma.ui.ScrollableListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/aurasma_progress_large"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="<your.package.name>"
+  android:versionName="<yourApplicationVersion>"
+  android:installLocation="preferExternal">
+
+	<!--Aurasma uses declarations. These permissions are required for correct starting of the kernel. -->
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+	<uses-sdk android:minSdkVersion="8" />
+	
+	<!--Hardware features. These will not be used for market filtering, but Aurasma will fail to start where these are not satisfiable. -->
+	<uses-feature android:name="android.hardware.location" required="false" />
+	<uses-feature android:name="android.hardware.location.gps" required="false" />
+	<uses-feature android:name="android.hardware.location.network" required="false" />
+	<uses-feature android:name="android.hardware.camera" required="false" />
+	<uses-feature android:name="android.hardware.camera.autofocus" required="false" />
+	<uses-feature android:glEsVersion="0x00020000" required="false" />
+
+	<!-- Application details -->
+	<application
+	  android:label="<yourApplicationName>"
+	  android:icon="@drawable/<yourApplicationIcon>"
+	  android:allowTaskReparenting="true" />
+
+	<!-- Your application's activity, service, provider and receiver definitions go here -->
+			
+
+	<!-- Content provider for reading local files -->
+	<!-- Modify <your.package.name> in the next line to match the package definition at the top of your manifest file.
+		This must match your application's package name to avoid installation conflicts on devices-->
+	<provider android:name="com.aurasma.aurasma.help.LocalFileContentProvider"
+		android:authorities="<your.package.name>.local" />
+	
+	<!-- com.aurasma.aurasma definitions below - DO NOT CHANGE -->
+			
+	<!-- ACTIVITIES -->
+	<!-- com.aurasma.aurasma Activities -->
+	
+	<activity android:name="com.aurasma.aurasma.SetupActivity"
+		android:launchMode="singleTop" android:configChanges="orientation|keyboardHidden"
+		android:screenOrientation="landscape" android:allowTaskReparenting="true"
+		android:theme="@android:style/Theme.NoTitleBar" />
+	
+	<activity android:name="com.aurasma.aurasma.LoginActivity"
+		android:configChanges="orientation|keyboardHidden" android:label="@string/aurasma_loginActivityName" />
+	
+	<!-- com.aurasma.aurasma.trackingar Activity -->
+	
+	<activity android:name="com.aurasma.aurasma.trackingar.TrackingActivity"
+	  android:screenOrientation="landscape"
+		android:launchMode="singleTask" android:configChanges="orientation|keyboardHidden"
+		android:allowTaskReparenting="true" android:label="@string/aurasma_app_name"
+		android:theme="@android:style/Theme.NoTitleBar" />
+  
+  <activity android:name="com.aurasma.aurasma.trackingar.WebActivity"
+    android:launchMode="singleTop" android:configChanges="orientation|keyboardHidden"
+    android:theme="@android:style/Theme.NoTitleBar" />
+    
+  <activity android:name="com.aurasma.aurasma.trackingar.ScreenshotActivity"
+    android:launchMode="singleTop" android:configChanges="orientation|keyboardHidden"
+    android:theme="@android:style/Theme.NoTitleBar" />
+	
+	
+	<!-- com.aurasma.aurasma.addaura Activities -->
+	
+	<activity
+		android:name="com.aurasma.aurasma.addaura.SelectAugmentationActivity"
+		android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+		android:launchMode="singleTop" android:label="@string/aurasma_SelectAugmentationActivity" />
+	
+	<activity
+		android:name="com.aurasma.aurasma.addaura.AddNameAndChannelActivity"
+		android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+		android:launchMode="singleTop" android:label="@string/aurasma_SelectAugmentationActivity" />
+	
+	<activity android:name="com.aurasma.aurasma.addaura.AddChannelActivity"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"
+		android:label="@string/aurasma_AddChannelActivityName" />
+	
+	<activity android:name="com.aurasma.aurasma.addaura.ExistingChannelActivity"
+		android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+		android:launchMode="singleTop" android:label="@string/aurasma_ExistingChannelActivity" />
+	
+	<activity android:name="com.aurasma.aurasma.addaura.PositionAuraActivity"
+		android:launchMode="singleTop" android:configChanges="orientation|keyboardHidden" />
+	
+	
+	<!-- com.aurasma.aurasma.channellist Activities -->
+	
+	<activity android:name="com.aurasma.aurasma.channellist.ChannelsTabBar"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"
+		android:label="@string/aurasma_ChannelsTabBarName" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.MeTab"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.SubscribedListView"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.ChannelsListView"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.PopularListView"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.RecommendedListView"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.RecentListView"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.NearbyListView"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.SearchActivity"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.MyChannelsListView"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.RegisterActivity"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.channellist.ChannelInfoActivity"
+		android:launchMode="singleTop" />
+	
+	<!-- com.aurasma.aurasma.anywhereslist Activities -->
+	
+	<activity android:name="com.aurasma.aurasma.anywhereslist.MyAnywheresList"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<activity android:name="com.aurasma.aurasma.anywhereslist.SuperListView"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" />
+	
+	<!-- com.aurasma.aurasma.happeningmap Activity -->
+	
+	<activity android:name="com.aurasma.aurasma.happeningmap.HappeningMap"
+		android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" android:theme="@android:style/Theme.NoTitleBar" />
+	
+	<!-- com.aurasma.aurasma.help Activities -->
+	
+	<activity android:name="com.aurasma.aurasma.help.ScrollHelpActivity"
+		android:screenOrientation="landscape" android:launchMode="singleTop"
+		android:label="@string/aurasma_scrollHelpActivity" />
+	
+	<activity android:name="com.aurasma.aurasma.help.HelpMainActivity"
+		android:screenOrientation="landscape" android:launchMode="singleTop"
+		android:label="@string/aurasma_helpMainActivity" />
+	
+	<!-- RECIEVER -->
+	<receiver android:name="com.aurasma.aurasma.application.ConnectionStatusReceiver">
+		<intent-filter>
+			<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+		</intent-filter>
+	</receiver>
+	
+	<!-- LIBRARY REQUIREMENT -->
+	<uses-library android:name="com.google.android.maps" />
+
+	</application>
+
+</manifest> 

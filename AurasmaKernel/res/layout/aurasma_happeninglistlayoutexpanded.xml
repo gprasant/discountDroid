@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_row_layout_expanded"
+    style="@style/aurasma_blueLozenge"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/aurasma_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:gravity="center_vertical"
+        android:padding="3dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/aurasma_list_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@drawable/aurasma_blue_lozenge_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/aurasma_distance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@drawable/aurasma_blue_lozenge_text"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/aurasma_share_aura_button_linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|bottom"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/aurasma_share_aura_button"
+                style="@style/aurasma_greenButton"
+                android:background="@drawable/aurasma_subscribe_btn"
+                android:focusable="false"
+                android:text="@string/aurasma_shareButtonText" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

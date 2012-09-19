@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/aurasma_augloadingtext"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:text="@string/aurasma_load_message"
+        android:textColor="@color/aurasma_dark_button_text" />
+
+    <ProgressBar
+        android:id="@+id/aurasma_augloadingspinner"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@id/aurasma_augloadingtext"
+        android:padding="5dp" />
+
+</RelativeLayout>

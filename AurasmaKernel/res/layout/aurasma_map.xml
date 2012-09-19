@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.aurasma.aurasma.happeningmap.HappeningMapView
+        android:id="@+id/aurasma_mapviewt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="0bLfAWt1AggCCEivMeftYYRegWNpJoPLSwy4Ebg"
+        android:clickable="true"
+        android:state_enabled="true" />
+
+    <include
+        android:id="@+id/aurasma_more_happening_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        layout="@layout/aurasma_more_happening_view"
+        android:visibility="gone" />
+
+</RelativeLayout>

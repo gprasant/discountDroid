@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.happeningmap.MoreAuraView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aurasma_balloon_main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="left"
+    android:background="@android:color/transparent"
+    android:gravity="right"
+    android:orientation="horizontal"
+    android:padding="0dp" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/aurasma_overall_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="fill_vertical"
+        android:layout_marginLeft="200dp"
+        android:layout_weight="0"
+        android:background="@drawable/aurasma_one_corner_grey_box"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp" >
+
+        <com.aurasma.aurasma.ui.URLLoadingImageView
+            android:id="@+id/aurasma_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="fill_vertical"
+            android:padding="0dp" />
+
+        <TextView
+            android:id="@+id/aurasma_happening_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="10dp"
+            android:shadowColor="#0106000e"
+            android:text="happening_item_title"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/aurasma_subs_aura_button"
+            style="@style/aurasma_greenButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/aurasma_subscribe_btn"
+            android:focusable="false"
+            android:text="@string/aurasma_subscribeButtonText"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/aurasma_non_subs_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageButton
+                android:id="@+id/aurasma_ft_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/aurasma_ft_small_btn" />
+
+            <ImageButton
+                android:id="@+id/aurasma_rating_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/aurasma_rating_small_btn"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/aurasma_trash_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/aurasma_trash_small_btn"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/aurasma_direction_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@drawable/aurasma_direction_small_btn" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.aurasma.aurasma.happeningmap.MoreAuraView>

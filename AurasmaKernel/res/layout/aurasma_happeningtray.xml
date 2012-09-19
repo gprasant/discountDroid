@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aurasma.aurasma.ui.HappeningTrayView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageButton android:id="@+id/aurasma_help"
+                     android:scaleType="fitCenter"
+                     android:layout_width="66dp"
+                     android:layout_height="66dp"
+                     android:layout_above="@+id/aurasma_drawer"
+                     android:layout_alignWithParentIfMissing="true"
+                     android:visibility="gone"
+                     android:src="@drawable/aurasma_info_btn"/>
+	<include
+    layout="@layout/aurasma_more_happening_view"
+    android:id="@+id/aurasma_more_happening_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:visibility="gone"
+    android:layout_above="@+id/aurasma_drawer"
+    android:layout_alignParentRight="true"/>
+    
+  <SlidingDrawer xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/aurasma_drawer"
+		android:layout_width="fill_parent"
+		android:layout_height="100dp"
+		android:handle="@+id/aurasma_handle"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:gravity="center_vertical"
+		android:content="@+id/aurasma_content">
+
+        <com.aurasma.aurasma.trackingar.HappeningGallery
+        android:id="@+id/aurasma_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+        <ImageView
+			android:id="@id/aurasma_handle"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			/>
+	</SlidingDrawer>
+</com.aurasma.aurasma.ui.HappeningTrayView>

@@ -1,0 +1,30 @@
+
+    <resources>
+        <color name="aurasma_cropview_background">#80000000</color>
+        <color name="aurasma_selected_blue_light">#FFAEDEFF</color>
+        <color name="aurasma_selected_blue_dark">#FF004CC3</color>
+        <color name="aurasma_not_selected_grey_light">#FFE5E5E5</color>
+        <color name="aurasma_not_selected_grey_dark">#FFCCCCCC</color>
+        <color name="aurasma_dark_button_light">#FF727E9E</color>
+        <color name="aurasma_dark_button_dark">#FF030D1E</color>
+        <color name="aurasma_medium_button_light">#FFAEDEFF</color>
+        <color name="aurasma_medium_button_dark">#FF004CC3</color>
+        <color name="aurasma_light_button_light">#FFE5E5E5</color>
+        <color name="aurasma_light_button_dark">#FFCCCCCC</color>
+        <color name="aurasma_dark_button_text">#FFFFFFFF</color>
+        <color name="aurasma_medium_button_text">#FFFFFFFF</color>
+        <color name="aurasma_light_button_text">#FF888888</color>
+        <color name="aurasma_dark_button_outline">#FF030D1E</color>
+        <color name="aurasma_medium_button_outline">#FF004CC3</color>
+        <color name="aurasma_light_button_outline">#FFCCCCCC</color>
+        <color name="aurasma_selected_text">#FFFFFFFF</color>
+        <color name="aurasma_not_selected_text">#FF888888</color>
+        <color name="aurasma_disabled_grey_text">#FF3B465E</color>
+        <color name="aurasma_lozenge_blue">#DD9CBFD3</color>
+        <color name="aurasma_lozenge_blue_selected">#FFC4D7E2</color>
+        <color name="aurasma_dark_blue_text">#FF082A3D</color>
+        <color name="aurasma_dary_gray">#CC444444</color>
+        <color name="aurasma_dary_gray_no_alpha">#FF444444</color>
+        <color name="aurasma_grey_outline">#FFCCCCCC</color>
+        <color name="aurasma_stroke_trans">#00000000</color>
+    </resources>
