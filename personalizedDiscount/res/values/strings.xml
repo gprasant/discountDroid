@@ -5,7 +5,7 @@
     <string name="info2">Place it upright</string><string name="info3">Tap to snap if nothing\'s found</string>
     <string name="home_scan">Scan</string>
     <string name="scan_name">ScanActivity</string>
-    <string name="please_login">Please login with facebook to continue</string>
     <string name="aurasma">Aurasma</string>
     <string name="app_version">1.0.0</string>
+    <string name="please_login">Please login with facebook to continue</string>
 </resources>

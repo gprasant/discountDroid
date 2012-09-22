@@ -60,7 +60,12 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="module" module-name="AurasmaKernel" />
     <orderEntry type="module" module-name="facebook" />
+    <javadoc-paths>
+      <root url="jar://$MODULE_DIR$/../AurasmaKernel/AurasmaKernel-javadoc.jar!/" />
+    </javadoc-paths>
   </component>
 </module>
 
