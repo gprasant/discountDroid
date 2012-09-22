@@ -25,8 +25,9 @@ implements ScanActivity.Listener, SlidingDrawer.OnDrawerCloseListener,
 	private ScannerSession session = null;
 	private Scanner scanner = null;
     private DiscountService  discountService = new DiscountService();
+    private String user;
 
-	public Overlay(Context context, AttributeSet attrs) {
+    public Overlay(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		try {
 			scanner = Scanner.get();
@@ -35,8 +36,9 @@ implements ScanActivity.Listener, SlidingDrawer.OnDrawerCloseListener,
 		}
 	}
 
-	public void init() {
-		this.drawer = ((SlidingDrawer) findViewById(R.id.drawer));
+	public void init(String user) {
+        this.user = user;
+        this.drawer = ((SlidingDrawer) findViewById(R.id.drawer));
 		this.drawer.setOnDrawerCloseListener(this);
 		this.drawer.setOnDrawerOpenListener(this);
 		((ScrollView) findViewById(R.id.scroll)).setSmoothScrollingEnabled(true);
@@ -140,7 +142,7 @@ implements ScanActivity.Listener, SlidingDrawer.OnDrawerCloseListener,
 
     private void displayDiscount(String productName) {
         TextView offerText = (TextView) findViewById(R.id.offerText);
-        Discount discount = discountService.fetchDiscount(productName);
+        Discount discount = discountService.fetchDiscount(user, productName);
         offerText.setText(discount.getOff());
     }
 

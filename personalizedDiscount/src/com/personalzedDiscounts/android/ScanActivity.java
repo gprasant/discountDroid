@@ -1,5 +1,6 @@
 package com.personalzedDiscounts.android;
 
+import android.content.SharedPreferences;
 import com.moodstocks.android.*;
 
 import android.app.Activity;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 public class ScanActivity extends Activity implements ScannerSession.Listener, View.OnClickListener, ProgressDialog.OnCancelListener {
 
+    private SharedPreferences mPrefs;
 	//-----------------------------------
 	// Interface implemented by overlays
 	//-----------------------------------
@@ -47,7 +49,8 @@ public class ScanActivity extends Activity implements ScannerSession.Listener, V
 		super.onResume();
 		// initialize the overlay, that will display results and informations
 		overlay = (Overlay) findViewById(R.id.overlay);
-		overlay.init();
+        String user = getUser();
+		overlay.init(user);
 		// initialize the tap-on-screen
 		touch = findViewById(R.id.touch);
 		touch.setOnClickListener(this);
@@ -73,7 +76,12 @@ public class ScanActivity extends Activity implements ScannerSession.Listener, V
 		overlay.onStatusUpdate(status);
 	}
 
-	@Override
+    private String getUser() {
+        mPrefs = getSharedPreferences(Constants.PREF_NAME,MODE_PRIVATE);
+        return mPrefs.getString("user", null);
+    }
+
+    @Override
 	protected void onPause() {
 		super.onPause();
 		session.close();

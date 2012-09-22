@@ -15,7 +15,7 @@ public class DiscountServiceTest extends AndroidTestCase {
     }
 
     public void testShouldFetchDiscount() throws Exception {
-        Discount discount = service.fetchDiscount("product");
+        Discount discount = service.fetchDiscount("user", "product");
         Assert.assertTrue(discount.getOff().trim().matches("\\d{2} %"));
     }
 }

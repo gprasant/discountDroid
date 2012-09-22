@@ -16,13 +16,13 @@ import java.io.InputStreamReader;
 
 public class DiscountService {
 
-    public static final String PERSONALIZED_SERVICE_URL = "http://snoopy.apphb.com/api/discounts?user=user&product=%s";
+    public static final String PERSONALIZED_SERVICE_URL = "http://snoopy.apphb.com/api/discounts?user=%s&product=%s";
 
-    public Discount fetchDiscount(String product){
+    public Discount fetchDiscount(String userName, String productName){
         Discount discount = new Discount("error", "error");
         
         try{
-            String response = getDiscount(product);
+            String response = getDiscount(userName, productName);
             JSONObject jsonObject = new JSONObject(response);
             String off = jsonObject.getString("Off");
             String name = jsonObject.getString("Product");
@@ -35,10 +35,10 @@ public class DiscountService {
         return discount;
     }
 
-    private String getDiscount(String product) {
+    private String getDiscount(String user, String product) {
         StringBuilder builder = new StringBuilder();
         HttpClient client = new DefaultHttpClient();
-        HttpGet httpGet = new HttpGet(String.format(PERSONALIZED_SERVICE_URL, product));
+        HttpGet httpGet = new HttpGet(String.format(PERSONALIZED_SERVICE_URL, user, product));
         httpGet.setHeader("Content-type","application/json");
         try {
             HttpResponse response = client.execute(httpGet);
