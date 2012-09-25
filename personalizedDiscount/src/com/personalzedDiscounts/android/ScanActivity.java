@@ -1,28 +1,26 @@
 package com.personalzedDiscounts.android;
 
-import android.content.SharedPreferences;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Intent;
-import android.util.Log;
-import com.aurasma.aurasma.AurasmaIntentFactory;
-import com.aurasma.aurasma.application.AurasmaSetupCallback;
-import com.aurasma.aurasma.exceptions.AurasmaLaunchException;
-import com.moodstocks.android.*;
-
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.SlidingDrawer;
 import android.widget.Toast;
+import com.aurasma.aurasma.AurasmaIntentFactory;
+import com.aurasma.aurasma.application.AurasmaSetupCallback;
+import com.aurasma.aurasma.exceptions.AurasmaLaunchException;
+import com.moodstocks.android.MoodstocksError;
+import com.moodstocks.android.Result;
+import com.moodstocks.android.ScannerSession;
 
 public class ScanActivity extends Activity implements ScannerSession.Listener, View.OnClickListener, ProgressDialog.OnCancelListener {
-
-    private SharedPreferences mPrefs;
 	//-----------------------------------
 	// Interface implemented by overlays
 	//-----------------------------------
@@ -61,8 +59,7 @@ public class ScanActivity extends Activity implements ScannerSession.Listener, V
 		super.onResume();
 		// initialize the overlay, that will display results and informations
 		overlay = (Overlay) findViewById(R.id.overlay);
-        String user = getUser();
-		overlay.init(user);
+		overlay.init();
 		// initialize the tap-on-screen
 		touch = findViewById(R.id.touch);
 		touch.setOnClickListener(this);
@@ -87,11 +84,6 @@ public class ScanActivity extends Activity implements ScannerSession.Listener, V
 		status.putBoolean("decode_qrcode", (ScanOptions & Result.Type.QRCODE) != 0);
 		overlay.onStatusUpdate(status);
 	}
-
-    private String getUser() {
-        mPrefs = getSharedPreferences(Constants.PREF_NAME,MODE_PRIVATE);
-        return mPrefs.getString("user", null);
-    }
 
     @Override
 	protected void onPause() {

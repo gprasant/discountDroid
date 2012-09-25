@@ -4,20 +4,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
-import com.facebook.android.DialogError;
-import com.facebook.android.Facebook;
-import com.facebook.android.FacebookError;
 import com.moodstocks.android.MoodstocksError;
 import com.moodstocks.android.Scanner;
-import org.json.JSONObject;
-
-import java.io.IOException;
 
 public class HomeScreen extends Activity implements View.OnClickListener, Scanner.SyncListener {
 
@@ -29,28 +21,10 @@ public class HomeScreen extends Activity implements View.OnClickListener, Scanne
 	private long last_sync = 0;
 	private static final long DAY = DateUtils.DAY_IN_MILLIS;
 
-    Facebook facebook = new Facebook("226490220813959");
-    private SharedPreferences mPrefs;
-
-
-
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-        authorizeWithFacebook();
-
-        try {
-
-            String me = facebook.request("me");
-            Toast.makeText(getApplicationContext(),me,Toast.LENGTH_SHORT);
-            Log.i(me,"superUnique");
-        } catch (IOException e) {
-            Toast.makeText(getApplicationContext(),"meow",Toast.LENGTH_LONG);
-            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG);
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-
+        CredentialManager.authorize(this);
 
         /* First of all, check that the device is compatible, aka runs Android 2.3 or over.
            * If it's not the case, you **must** not try using the scanner as it will crash.
@@ -114,66 +88,10 @@ public class HomeScreen extends Activity implements View.OnClickListener, Scanne
 		}
 	}
 
-    private String getUser(){
-        try {
-            String response = facebook.request("me");
-            JSONObject jsonObject = new JSONObject(response);
-            String username = jsonObject.getString("username");
-            return username;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return e.getMessage();
-        }
-    }
-
-    private void authorizeWithFacebook() {
-        mPrefs = getSharedPreferences(Constants.PREF_NAME, MODE_PRIVATE);
-        String access_token = mPrefs.getString("access_token", null);
-        long expires = mPrefs.getLong("access_expires", 0);
-        if(access_token != null) {
-            facebook.setAccessToken(access_token);
-        }
-        if(expires != 0) {
-            facebook.setAccessExpires(expires);
-        }
-
-        if(!facebook.isSessionValid()) {
-
-            facebook.authorize(this, new String[] {}, new Facebook.DialogListener() {
-                @Override
-                public void onComplete(Bundle values) {
-                    SharedPreferences.Editor editor = mPrefs.edit();
-                    editor.putString("access_token", facebook.getAccessToken());
-                    editor.putLong("access_expires", facebook.getAccessExpires());
-                    editor.putString("user", getUser());
-                    editor.commit();
-                }
-
-                @Override
-                public void onFacebookError(FacebookError error) {
-                    Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_SHORT);
-                    authorizeWithFacebook();
-                }
-
-                @Override
-                public void onError(DialogError e) {
-                    Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT);
-                    authorizeWithFacebook();
-                }
-
-                @Override
-                public void onCancel() {
-                    Toast.makeText(getApplicationContext(),R.string.please_login,Toast.LENGTH_SHORT);
-                    authorizeWithFacebook();
-                }
-            });
-        }
-    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        facebook.authorizeCallback(requestCode, resultCode, data);
+        CredentialManager.getFacebook().authorizeCallback(requestCode, resultCode, data);
     }
 	
 	@Override
@@ -185,7 +103,7 @@ public class HomeScreen extends Activity implements View.OnClickListener, Scanne
 		 *   has not been synced for more than one day.
 		 */
 		super.onResume();
-        facebook.extendAccessTokenIfNeeded(this, null);
+        CredentialManager.getFacebook().extendAccessTokenIfNeeded(this, null);
         if (System.currentTimeMillis() - last_sync > DAY)
 			scanner.sync(this);
 	}
